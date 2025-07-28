@@ -2,9 +2,8 @@ on:
   push:
     branches: [main]
 
-
 jobs:
-  deploy:
+  Deploy:  # Capital D to match the assignment
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -14,5 +13,6 @@ jobs:
         uses: actions/setup-go@v2
         with:
           go-version: '1.16'
-      - name: Build and test  
+      
+      - name: Build  # More accurate name for CD
         run: scripts/buildprod.sh
